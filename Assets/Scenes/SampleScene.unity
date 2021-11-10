@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 159699570}
   m_Layer: 0
   m_Name: OffCamObj (1)
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 192919824}
   m_Layer: 0
   m_Name: OffCamObj
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 398432484}
   m_Layer: 0
   m_Name: RefObject
-  m_TagString: Untagged
+  m_TagString: junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 456602877}
   m_Layer: 0
   m_Name: RefObject (3)
-  m_TagString: Untagged
+  m_TagString: junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 513654348}
   m_Layer: 0
   m_Name: OffCamObj (3)
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 613985414}
   m_Layer: 0
   m_Name: RefObject (1)
-  m_TagString: Untagged
+  m_TagString: junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1388,6 +1388,8 @@ GameObject:
   - component: {fileID: 1569360782}
   - component: {fileID: 1569360781}
   - component: {fileID: 1569360783}
+  - component: {fileID: 1569360785}
+  - component: {fileID: 1569360784}
   m_Layer: 0
   m_Name: PlayerBot
   m_TagString: Untagged
@@ -1456,7 +1458,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.21, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2056058457}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1541,6 +1544,42 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!250 &1569360784
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569360777}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: -30
+  m_ForceVariation: 2
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 2
+  m_Drag: 0
+  m_AngularDrag: 0
+--- !u!58 &1569360785
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569360777}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &1682967567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1592,7 @@ GameObject:
   - component: {fileID: 1682967568}
   m_Layer: 0
   m_Name: RefObject (2)
-  m_TagString: Untagged
+  m_TagString: junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1674,7 @@ GameObject:
   - component: {fileID: 1891102696}
   m_Layer: 0
   m_Name: OffCamObj (5)
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1717,7 +1756,7 @@ GameObject:
   - component: {fileID: 1915444956}
   m_Layer: 0
   m_Name: OffCamObj (4)
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,7 +1836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994233591}
   m_Layer: 0
-  m_Name: CamTestObjects
+  m_Name: Gunk+Junk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1901,6 +1940,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2056058456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056058457}
+  - component: {fileID: 2056058459}
+  - component: {fileID: 2056058458}
+  m_Layer: 0
+  m_Name: Collector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2056058457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056058456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569360779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2056058458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056058456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221536569e2184e518b9138b88b209fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &2056058459
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056058456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0057194233, y: -0.011438966}
+  m_Size: {x: 0.79741156, y: 1.1715837}
+  m_Direction: 0
 --- !u!1 &2120016103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +2012,7 @@ GameObject:
   - component: {fileID: 2120016104}
   m_Layer: 0
   m_Name: OffCamObj (2)
-  m_TagString: Untagged
+  m_TagString: gunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

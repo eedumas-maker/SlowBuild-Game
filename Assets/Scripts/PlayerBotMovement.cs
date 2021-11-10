@@ -15,5 +15,20 @@ public class PlayerBotMovement : MonoBehaviour
     private void FixedUpdate()
     {
         transform.Translate(new Vector3(moveVal.x, moveVal.y, 0) * moveSpeed * Time.deltaTime);
+
+
+        #region flipping the character 
+        Vector3 characterScale = transform.localScale;
+        if (moveVal.x < 0)
+        {
+            characterScale.x = -1;
+        }
+        if (moveVal.x > 0)
+        {
+            characterScale.x = 1;
+        }
+
+        transform.localScale = characterScale;
+        #endregion
     }
 }
