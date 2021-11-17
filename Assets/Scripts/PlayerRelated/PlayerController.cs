@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {    
     public TrashInventory trashInv;
-    public IAction activeAction = new Throw();
+    public IAction activeAction;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnAction()
+    {
+        activeAction =  new Throw();
+        activeAction.Activate(this);
     }
 
 }

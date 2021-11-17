@@ -6,8 +6,10 @@ public class ThrowHeavy : IThrowBehaviors
 {
     Rigidbody2D rb;   
 
+    
     public void Throw(Rigidbody2D rb, Vector2 dir)
     {
-        rb.AddForce(dir);
+        Debug.Log("Throw Heavy");
+        rb.AddForce(dir, ForceMode2D.Impulse);
     }
 }

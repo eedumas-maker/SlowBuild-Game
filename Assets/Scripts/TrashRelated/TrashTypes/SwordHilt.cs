@@ -10,5 +10,6 @@ public class SwordHilt : Trash
         InventorySpaceTaken = 2;
         Weight = 20;
         Value = 1;
+        throwBehavior = new ThrowHeavy();
     }
 }

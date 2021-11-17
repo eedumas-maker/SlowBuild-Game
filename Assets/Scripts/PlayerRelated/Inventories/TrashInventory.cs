@@ -16,11 +16,13 @@ public class TrashInventory
         Contents.Add(trash);        
     }
 
-    public Trash RemoveLastTrash()
+    public Trash GetLastTrashIn()
     {
-        Trash lastTrash = Contents[Contents.Count - 1];
-        Contents.Remove(lastTrash);
-        return lastTrash;
+        return Contents[Contents.Count - 1];
+    }
+    public void RemoveLastTrash()
+    {        
+        Contents.RemoveAt(Contents.Count - 1);      
     }
 
 }

@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Throw : IAction
 {
-    public void Activate()
+
+    public void Activate(PlayerController player)
     {
-        throw new System.NotImplementedException();
+        Trash lastTrashType = player.trashInv.GetLastTrashIn();
+        player.trashInv.RemoveLastTrash();
+        GameObject trashProjectile = GameObject.Instantiate(TrashDictionary.trashDictionary[lastTrashType.Name], player.transform.position, player.transform.rotation);
+        Trash typeOfTrashProjectile = trashProjectile.GetComponentInChildren<Trash>();
+        typeOfTrashProjectile.throwBehavior.Throw(trashProjectile.GetComponentInChildren<Rigidbody2D>(), player.transform.forward);
+
+        
     }
 }
 

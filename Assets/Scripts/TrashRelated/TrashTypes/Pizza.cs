@@ -7,10 +7,11 @@ public class Pizza : Trash
     
     public Pizza() : base()
     {
-        Name = "Old Pizza";
+        Name = "Pizza";
         InventorySpaceTaken = 1;
         Weight = 1;
         Value = 0;
+        throwBehavior = new ThrowLight();
     }
 
 }

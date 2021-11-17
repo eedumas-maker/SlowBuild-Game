@@ -17,12 +17,6 @@ public class Trash : MonoBehaviour
         rb.mass = Weight;
     }
 
-    public Trash()
-    {
-        if (Weight > 10) throwBehavior = new ThrowHeavy();
-        else if (Weight > 5) throwBehavior = new ThrowMedium();
-        else throwBehavior = new ThrowLight();
-    }
 
 }
 
