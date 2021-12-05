@@ -184,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146966106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.20999987, y: 0.4200001, z: -10}
+  m_LocalPosition: {x: 0.20999976, y: 0.4200001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1126156924}
@@ -1111,7 +1111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.20999987, y: 0.4200001, z: -10}
+  m_LocalPosition: {x: 0.20999976, y: 0.4200001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1124,6 +1124,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1346214654339738234, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689631205174429843, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8073418671290920858, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
       propertyPath: m_Name
       value: SwordHilt (2)
@@ -1543,6 +1551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2943920351990994059, guid: 0018b6b03e804cd46a6ce48ed4ecf2f8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4368507312614756041, guid: 0018b6b03e804cd46a6ce48ed4ecf2f8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1591,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pizza (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5819598742029956706, guid: 0018b6b03e804cd46a6ce48ed4ecf2f8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0018b6b03e804cd46a6ce48ed4ecf2f8, type: 3}
 --- !u!1001 &1669211525
@@ -1600,6 +1616,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1346214654339738234, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689631205174429843, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8073418671290920858, guid: c6aea8f3c688238489ddcde4911b83c9, type: 3}
       propertyPath: m_Name
       value: SwordHilt (1)
@@ -2173,6 +2197,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4468816231059226699, guid: a79b2f62295aba2418379d981ad6cece, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4468816231059226708, guid: a79b2f62295aba2418379d981ad6cece, type: 3}
       propertyPath: m_Name
       value: PlayerBot
@@ -2225,5 +2253,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4468816231059226697, guid: a79b2f62295aba2418379d981ad6cece, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a79b2f62295aba2418379d981ad6cece, type: 3}
+--- !u!1 &4468816230781754202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4468816231059226708, guid: a79b2f62295aba2418379d981ad6cece, type: 3}
+  m_PrefabInstance: {fileID: 4468816230781754201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &4468816230781754203
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468816230781754202}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.4408848, y: 1.0294766}
+      - {x: 0.20168191, y: 0.4007121}
+      - {x: 1.4409035, y: -0.031279445}
