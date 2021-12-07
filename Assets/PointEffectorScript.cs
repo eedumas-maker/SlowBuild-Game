@@ -20,14 +20,14 @@ public class PointEffectorScript : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position);
-        // i have no idea how to get the mouse to look in the new system (made a new action for it)
+        //var mousePosition = PlayerActions.actions["Look"].ReadValue<Vector2>();
+        //var projectedMousePosition = Camera.ScreenToWorldPoint(mousePosition);
 
-        Vector2 direction = mousePosition - transform.position;
-        float angle = Vector2.SignedAngle(Vector2.right, direction);
+        //Vector2 direction = mousePosition - transform.position;
+        //float angle = Vector2.SignedAngle(Vector2.right, direction);
 
-        Vector3 targetRotation = new Vector3(0, 0, angle - 90);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), 360);
+        //Vector3 targetRotation = new Vector3(0, 0, angle - 90);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), 360);
 
     }
 
