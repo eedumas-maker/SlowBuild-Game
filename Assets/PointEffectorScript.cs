@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PointEffectorScript : MonoBehaviour
 {
 
-
+    Vector2 mousePosition;
 
     void Start()
     {
@@ -18,17 +19,18 @@ public class PointEffectorScript : MonoBehaviour
 
     }
 
+
     private void Update()
     {
-        //var mousePosition = PlayerActions.actions["Look"].ReadValue<Vector2>();
-        //var projectedMousePosition = Camera.ScreenToWorldPoint(mousePosition);
+        mousePosition = Mouse.current.position.ReadValue();
 
-        //Vector2 direction = mousePosition - transform.position;
-        //float angle = Vector2.SignedAngle(Vector2.right, direction);
+        Vector3 mouseCamera = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        //Vector3 targetRotation = new Vector3(0, 0, angle - 90);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), 360);
+        Vector2 direction = mouseCamera - transform.position;
 
+        float angle = Vector2.SignedAngle(Vector2.right, direction);
+
+        transform.eulerAngles = new Vector3(0, 0, angle);
     }
 
     public static void DrawPolygonCollider(PolygonCollider2D collider)
