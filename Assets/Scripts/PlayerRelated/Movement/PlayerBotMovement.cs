@@ -6,8 +6,13 @@ public class PlayerBotMovement : MonoBehaviour
     public Vector2 moveVal;   
     
     public float moveSpeed;
-    
 
+    public SpriteRenderer botSprite;
+
+    private void Start()
+    {
+        botSprite = this.transform.Find("PlayerBotGfx").GetComponent<SpriteRenderer>();
+    }
 
     void OnMovement(InputValue value)
     {
@@ -26,7 +31,8 @@ public class PlayerBotMovement : MonoBehaviour
     }
     private void FlipPlayerSprite()
     {
-        Vector3 playerScale = transform.localScale;
+        Vector3 playerScale = botSprite.transform.localScale;
+
         if (moveVal.x < 0)
         {
             playerScale.x = -1;
@@ -36,7 +42,7 @@ public class PlayerBotMovement : MonoBehaviour
             playerScale.x = 1;
         }
 
-        transform.localScale = playerScale;
+        botSprite.transform.localScale = playerScale;
     }
 
     

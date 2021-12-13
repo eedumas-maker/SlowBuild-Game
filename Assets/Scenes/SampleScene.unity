@@ -943,6 +943,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1609873281}
   - component: {fileID: 1609873282}
+  - component: {fileID: 1609873284}
+  - component: {fileID: 1609873283}
   m_Layer: 3
   m_Name: VacStick
   m_TagString: Untagged
@@ -977,6 +979,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793984665426340e98e9d0253890bf1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pfDelivery: {fileID: 0}
+--- !u!60 &1609873283
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609873280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.9871267, y: -0.39469314}
+      - {x: 2.0063372, y: 0.5232985}
+      - {x: 0.6152484, y: 0.06280851}
+      - {x: 0.6159432, y: 0.013858825}
+      - {x: 0.6170648, y: -0.06515318}
+--- !u!250 &1609873284
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609873280}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: -20
+  m_ForceVariation: 0
+  m_DistanceScale: 3
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 1
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!50 &1721732542 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2943920351990994059, guid: 0018b6b03e804cd46a6ce48ed4ecf2f8, type: 3}
